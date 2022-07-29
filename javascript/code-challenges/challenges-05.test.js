@@ -13,8 +13,8 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   // Solution code here...
-  let fullNames = people.map(person => `${person.firstName} ${person.lastName}`);
-  return fullNames;
+  let fullName = people.map(person => `${person.firstName} ${person.lastName}`);
+  return fullName;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -28,7 +28,7 @@ const addValues = (arr) => {
   // Solution code here...
   let sum = arr.reduce((num, Value) => {
     return num + Value;
-  }, 0);
+  }, 0)
   return sum;
 };
 
@@ -46,8 +46,8 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
-  let total = arr.reduce((currentAmount, currentValue) => {
-    return currentAmount + currentValue.purchasePrice;
+  let total = arr.reduce((currentTotal, currentValue) => {
+    return currentTotal + currentValue.purchasePrice;
   }, 0);
   return total;
 };
@@ -62,11 +62,11 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
-  let countNums = arr.reduce((Value) => {
-    return Value + 1;
+  let count = arr.reduce((value) => {
+    return value + 1;
   }
-  , 0);
-  return countNums;
+  , );
+  return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -127,8 +127,8 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
-  let names = arr.reduce((firstValue, secondValue) => [...firstValue, secondValue.name], []
-
+  let names = arr.reduce((previous, current) => [...previous, current.name],
+  []
 );
 return names;
 };
@@ -143,10 +143,12 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
-  let reverseLetters = str.split('').reduce((firstValue, secondValue) => {
-    return secondValue + firstValue;
-  }
-  , '');
+
+let reverse = str.split('').reduce((previousValue, currentValue) => {
+  return currentValue + previousValue;
+}
+, '');
+return reverse;
 };
 
 /* ------------------------------------------------------------------------------------------------
